@@ -1,0 +1,15 @@
+<form [formGroup]="testFormGroup" (ngSubmit)="submit(testFormGroup)">
+  <label for="name">Name</label>
+  <input type="text" formControlName="name">
+
+  <br>
+
+  <label for="name">Phone</label>
+  <input type="text" formControlName="phone">
+
+  <br>
+
+  <button type="submit" [disabled]="!testFormGroup.valid">
+    Save
+  </button>
+</form>
